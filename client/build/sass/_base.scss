@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+
+}
+
+.wrapper {
+    padding: 3rem;
+    display: flex;
+    flex: 1;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+}
+
+.nav {
+
+    &__title {
+        flex: 1;
+        height: 7rem;
+        border-bottom: solid .2px black;
+        padding: 2rem;
+        margin: .5rem 1rem;
+        display: flex;
+        align-items: center;
+        font-weight: 300;
+    }
+
+    &__homePageLink {
+        text-decoration: none;
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    &__space-box {
+        height: 5rem;
+    }
+
+    &__links-box {
+        display: flex;
+        flex: 1;
+    }
+
+    &__links-ul {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 1rem;
+    }
+
+    &__links-li {
+        list-style: none;
+        height: 5rem;
+        border-top: solid .2px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__links {
+        text-decoration: none;
+        margin: auto 0;
+        font-size: 2rem;
+        // transition: all 2s;
+        color: #000;
+
+        &:hover{
+            cursor: pointer;
+            // transform: translate(0, -1px)
+            color: #8B8581
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+        margin: .5rem 1rem;
+        display: flex;
+        justify-content: center;
+        height: 7rem;
+        align-items: center;
+        border-bottom: solid .2px;
+
+
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__choices {
+        display: flex;
+        flex: 1;
+        margin: 1rem 1rem;
+        background-image: url('https://res.cloudinary.com/dawjvqyvd/image/upload/c_scale,w_1650/v1531541657/fancycrave-224904-unsplash.jpg');
+        background-size: cover;
+        height: 80vh;
+    }
+
+    &__btnContainer {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__btn {
+        padding: 1rem 1.5rem;
+        background-color: white;
+        color: #000;
+        margin: 3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        height: 5rem;
+        width: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+
+        &:hover{
+            cursor: pointer;
+            background-color: silver;
+        }
+    }
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.errorMessage {
+    font-size: 4rem;
+    color: red;
+    text-shadow: .1rem .1rem .2rem black;
+    background-color: white;
+    // padding: 1rem;
+}
+
+.footer {
+    flex: 0 1 5.5rem;
+    background-color: darkmagenta;
+}

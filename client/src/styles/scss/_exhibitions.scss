@@ -1,0 +1,316 @@
+// Exhibition and main layout with title should move to base
+.exhibitions {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: scroll;
+    // border: solid 1px black;
+
+    &__title {
+        text-align: center;
+        margin: .5rem 1rem;
+        display: flex;
+        flex: 0 1 auto;
+        justify-content: center;
+        height: 7rem;
+        align-items: center;
+        border-bottom: solid .2px;
+        font-size: 3rem;
+        font-weight: 300;
+
+        &--floorTitle {
+            flex: 1 0 auto;
+            height: 6.5rem;
+        }
+    }
+
+    &__content-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__individual-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1rem 1rem;
+        background-image: url('https://res.cloudinary.com/dawjvqyvd/image/upload/c_scale,w_1650/v1531590817/cristina-gottardi-665244-unsplash.jpg');
+        background-size: cover;
+        height: 80vh;
+    }
+
+    &__btn-container {
+        display: flex;
+        padding: 2rem;
+    }
+
+    &__btn {
+        padding: 1rem 1.5rem;
+        background-color: white;
+        color: #000;
+        margin: 3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        height: 5rem;
+        width: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        &:hover {
+            cursor: pointer;
+            background-color: silver;
+        }
+    }
+
+
+
+
+// Floor Layout Styling
+
+    &__floor-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    &__coverImgContainer {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        margin: 1rem 0 2rem 0;
+        border-bottom: solid 1px black;
+    }
+
+    &__inputBox {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        padding: 2rem;
+    }
+
+    &__galleryArrayImageHolder {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 auto;
+        border-top: solid 1px black;
+    }
+
+    &__learnMoreSection {
+        display: flex;
+        flex: 1 0 auto;
+        padding: 2rem;
+        flex-direction: column;
+        border-top: solid 1px black;
+        // border: solid black 1px;
+    }
+
+// Floor Gallery Img Styling 
+    &__coverImg {
+        max-width: 100%;
+        object-fit: contain;
+        margin: 1rem;
+    }
+
+    &__imageTitleArea {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        padding: 2rem;
+        align-items: center;
+    }
+
+    &__imageCardArea {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: solid 1px black;
+        justify-content: space-around;
+    }
+
+    &__imageCard {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 25rem;
+        margin: 1rem 0 2rem 0;
+        border: solid black 1px; 
+        background-color: #fff;
+        box-shadow: 0 4px 2px -2px grey;
+
+        &-btnArea {
+            display: flex;
+            justify-content: space-around;
+            border: solid white 1px;
+            margin: 0 2rem;
+        }
+    }
+
+    &__imgs {
+        width: 100%;
+        padding: 2rem;
+        object-fit: cover;
+    }
+
+}
+
+.audioTextBeforeEditing {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+.audioTextEditing {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.audioLinkBtn {
+    border: solid 1px black;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    &--connect {
+        width: 28rem;
+    }
+
+    &--coverImg {
+        margin-top: 1rem;
+    }
+
+    &--AddImage {
+        margin-top: 1rem;
+        width: 13rem;
+    }
+
+    &--EditImage {
+        margin: 0 auto 1rem auto;
+    }
+
+    &--DeleteImage {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+    }
+
+    &--SubmitImage {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &--ProgramBtns {
+        width: 16rem;
+        min-height: 4rem;
+    }
+
+    &--AddProgram {
+        text-align: center;
+        margin: 1rem auto 0 auto;
+        width: 14rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: silver;
+    }
+
+
+}
+
+.audioTitle {
+    border-bottom: solid 1px black;
+    margin-bottom: 2rem;
+}
+
+.audioInput {
+    padding: 1rem;
+    border: solid 1px black;
+    width: 60rem;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    outline: none;
+
+    &__error {
+        padding: 1rem;
+        border: solid 2px red;
+        width: 60rem;
+        border-radius: 2rem;
+        margin-left: 1rem;
+        font-size: 2rem;
+        outline: none;
+
+        &--msg {
+            display: flex;
+            font-size: 2rem;
+            justify-content: center;
+            color: red;
+        }
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &--ImageEdit {
+        width: auto;
+        margin-right: 1rem;
+
+        &--error {
+            margin-left: 0;
+            width: auto;
+        }
+    }
+
+    &:focus {
+        border: solid 1px green;
+    }
+}
+
+.articlePicture {
+    width: 100%;
+}
+
+.articlePictureBox {
+    width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    flex: 1;
+}
+
+.articleInputBox {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.delete__icon {
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+    fill: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    &:hover {
+        fill: darkred;
+    }
+}
